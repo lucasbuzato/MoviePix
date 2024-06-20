@@ -20,9 +20,18 @@ export default function PaginaFilmes(){
 
     return(
         <>
-        <img src={`${urlImg}${filme.backdrop_path}`}/>
-        <h1>{filme.title}</h1>
-        <p>{filme.overview}</p>
+        <div className="p-36  mx-5 flex items-center">
+        <img className="" src={`${urlImg}${filme.poster_path}`}/>
+        <div className="pl-16  mx-5">
+        <h1 className="font-bold text-2xl text-white">{filme.title}</h1>
+        <p >{filme.overview}</p>
+        </div>
+        </div>
+
+        <h1 class="p-10 flex justify-center font-bold text-4xl text-White">Trailer</h1>
+        <div className="flex justify-center">
+        <img class=""src="/src/componentes/Images/Rectangle 4236.png" alt="" />
+        </div>
         </>
     )
 }

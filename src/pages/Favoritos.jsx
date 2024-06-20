@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
 
-
-export default function Filmes() {
+export default function Favoritos() {
 
 
     const [filmes, setFilmes] = useState([])
@@ -21,7 +22,17 @@ export default function Filmes() {
 
     return ( 
         <>
-        <h1 class="flex py-5  mx-5 font-bold text-4xl text-Red-claro">Filmes</h1>
+        <Flicking
+            align="prev" circular={true}onMoveEnd={e => {console.log(e);}}>
+            <div className="panel w-screen"><img src="/src/componentes/Images/pexels-brunomassao-2335048.jpg" alt="" /></div>
+    
+            <div className="panel w-screen"><img src="/src/componentes/Images/pexels-alexfu-1188750.jpg" alt="" /></div>
+    
+            <div className="panel w-screen"><img src="/src/componentes/Images/pexels-knelstrom-67654.jpg" alt="" /></div>
+    
+        </Flicking>
+
+        <h1 class="flex py-5  mx-5 font-bold text-4xl text-Red-claro">Favoritos</h1>
         <div className="listaFilmes flex justify-center flex-row gap-6 flex-wrap">
             {
                 filmes.map(
