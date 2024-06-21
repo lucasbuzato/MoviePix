@@ -18,7 +18,10 @@ function Home() {
     <div className="panel w-screen"><img src="/src/componentes/Images/pexels-alexfu-1188750.jpg" alt="" /></div>
     
     <div className="panel w-screen"><img src="/src/componentes/Images/pexels-knelstrom-67654.jpg" alt="" /></div>
+
+    <div className="panel w-screen"><img src="/src/componentes/Images/pexels-knelstrom-67654.jpg" alt="" /></div>
     
+    <div className="panel w-screen"><img src="/src/componentes/Images/pexels-knelstrom-67654.jpg" alt="" /></div>
   </Flicking>
 
 
