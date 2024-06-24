@@ -10,11 +10,17 @@ function Home(){
 
 <Flicking
             align="prev" circular={true}onMoveEnd={e => {console.log(e);}}>
-            <div className="panel w-screen"><img src="/src/componentes/Images/pexels-brunomassao-2335048.jpg" alt="" /></div>
+            <div className="panel w-screen"><img src={`${data[0].image}`} alt="" className="w-screen" /></div>
     
-            <div className="panel w-screen"><img src="/src/componentes/Images/pexels-alexfu-1188750.jpg" alt="" /></div>
+            <div className="panel w-screen"><img src={`${data[1].image}`} alt="" className="w-screen"/></div>
     
-            <div className="panel w-screen"><img src="src/componentes/Images/pexels-donaldtong94-109669.jpg" alt="" /></div>
+            <div className="panel w-screen"><img src={`${data[2].image}`} alt="" className="w-screen"/></div>
+
+            <div className="panel w-screen"><img src={`${data[3].image}`} alt="" className="w-screen" /></div>
+    
+            <div className="panel w-screen"><img src={`${data[4].image}`} alt="" className="w-screen"/></div>
+    
+            <div className="panel w-screen"><img src={`${data[5].image}`} alt="" className="w-screen"/></div>
     
         </Flicking>
 
