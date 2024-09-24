@@ -21,21 +21,7 @@ export default function Filmes() {
 
     return ( 
         <>
-        <h1 class="flex py-5  mx-5 font-bold text-4xl text-Red-claro">Filmes</h1>
-        <div className="listaFilmes flex justify-center flex-row gap-6 flex-wrap">
-            {
-                filmes.map(
-                    filme => (
-                        <div className="card-film" key={filme.id}>
-                            <img src={`${urlImg}${filme.poster_path}`}/>
-                            <h1>{filme.title}</h1>
-                            <Link to={`${filme.id}`} className="bg-blue-500">Saber Mais</Link>
-                        </div>
-                    )
-                )
-            }
-           
-        </div>
+        
         </>
 
      );

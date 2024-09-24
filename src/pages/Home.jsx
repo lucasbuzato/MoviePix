@@ -1,53 +1,29 @@
-import Flicking from "@egjs/react-flicking";
+
 import "@egjs/react-flicking/dist/flicking.css";
 import data from '../../articles.json'
 
 function Home(){
     return ( 
         <>
-
-
-
-<Flicking
-            align="prev" circular={true}onMoveEnd={e => {console.log(e);}}>
-            <div className="panel w-screen"><img src={`${data[0].image}`} alt="" className="w-screen" /></div>
-    
-            <div className="panel w-screen"><img src={`${data[1].image}`} alt="" className="w-screen"/></div>
-    
-            <div className="panel w-screen"><img src={`${data[2].image}`} alt="" className="w-screen"/></div>
-
-            <div className="panel w-screen"><img src={`${data[3].image}`} alt="" className="w-screen" /></div>
-    
-            <div className="panel w-screen"><img src={`${data[4].image}`} alt="" className="w-screen"/></div>
-    
-            <div className="panel w-screen"><img src={`${data[5].image}`} alt="" className="w-screen"/></div>
-    
-        </Flicking>
-
-
-
-  <h1 className="flex py-5  mx-5 font-bold text-4xl text-Red-claro">Noticias</h1>
-            <div className=' grid grid-cols-3 gap-4 items-start'>
-            {
-                data.map( (artigo, index) => (
-                    <div className='card p-5 flex flex-col items-center content-center  ' key={index}>
-                        <img className="w-96 p-2 " src={artigo.image} alt={artigo.title} />
-                        <h2 className='text-center font-bold text-3xl p-2 '>{artigo.title}</h2>
-                        <div className='tags flex justify-center p-2 '>
-                            {artigo.tags.map( (tag, index) => (
-                                <span className="bg-purple-600 p-1 m-1" key={index}>{tag}</span>
-                            ))}
-                        </div>
-                        <div className='texto text-center'>
-                        {artigo.text.map( (paragrafo,index) => (
-                            <p key={index}>{paragrafo}</p>
-                        ))}
-                        </div>
-
-                    </div>
-                ))
-            }
+        <div className="flex mb-24">
+        <div>
+            <img className="mt-10 " src="/fotocarrosel.png" alt="" />
+            <p className="font-bold text-3xl absolute left-9 top-2/4">
+            “Para tocar o inacessível chão<br></br>
+            é necessario a imensurável compreensão”
+            </p>
+        </div>
+        </div>
+        <div className="flex bg-Cinza justify-around mb-20 text-xl">
+            <div className="flex-col text-black w-96 p-8 h-24">
+            <p className="text-black mb-5 font-bold">Lorem Ipsum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nunc urna, scelerisque sit amet erat sit amet, efficitur maximus magna.</p>
             </div>
+            <div className="flex flex-col bg-Verde flex w-96 p-8 h-96 relative top-16">
+            <p className="mb-5 font-bold">Lorem Ipsum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nunc urna, scelerisque sit amet erat sit amet, efficitur maximus magna.</p>
+            </div>
+        </div>
         </>
     );
   }
